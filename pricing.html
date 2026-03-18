@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Accordion Pricing with Toggle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pricing.css">
+</head>
+<body>
+
+    <svg style="display: none;">
+        <symbol id="icon-check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="var(--tick-color)"/>
+            <path d="M7 12.5L10 15.5L17 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-cross" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6l12 12" stroke="var(--cross-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+    </svg>
+
+    <div class="section-header">
+        <h2>Choose Your HR Plan</h2>
+        <p>Save up to 20% when you choose annual billing.</p>
+    </div>
+
+    <div class="toggle-wrapper">
+        <div class="billing-toggle" id="billingToggle">
+            <div class="toggle-slider"></div>
+            <button class="toggle-btn active" id="btnAnnual" onclick="setBilling('annual')">Annual</button>
+            <button class="toggle-btn" id="btnMonthly" onclick="setBilling('monthly')">Monthly</button>
+        </div>
+    </div>
+
+    <div class="pricing-accordion">
+        
+        <div class="acc-item">
+            <div class="acc-header" onclick="togglePricing(this)">
+                <div class="acc-title-group">
+                    <h3 class="acc-title">Starter</h3>
+                </div>
+                <div class="acc-price-group">
+                    <div class="acc-price">$<span class="price-val" data-annual="12" data-monthly="15">12</span><span class="period">/mo</span></div>
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+            </div>
+            <div class="acc-body">
+                <div class="acc-content-grid">
+                    <div class="feature-list">
+                        <h4>Plan Features</h4>
+                        <ul>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Access to core HR features</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Employee record management</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Basic reporting tools</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Manage up to 10 team members</li>
+                            
+                            <li class="disabled"><svg class="cross-icon"><use href="#icon-cross"></use></svg>Track employee attendance</li>
+                            <li class="disabled"><svg class="cross-icon"><use href="#icon-cross"></use></svg>Assign and monitor tasks</li>
+                            <li class="disabled"><svg class="cross-icon"><use href="#icon-cross"></use></svg>Email support</li>
+                            <li class="disabled"><svg class="cross-icon"><use href="#icon-cross"></use></svg>Simple onboarding process</li>
+                            <li class="disabled"><svg class="cross-icon"><use href="#icon-cross"></use></svg>Designed user-focused interfaces, optimized user</li>
+                        </ul>
+                    </div>
+                    <div class="form-wrapper">
+                        <h4>Get Started with Starter</h4>
+                        <form class="checkout-form" onsubmit="event.preventDefault(); alert('Starter Selected!');">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email Address" required>
+                            <button type="submit">Continue to Checkout</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="acc-item">
+            <div class="acc-header" onclick="togglePricing(this)">
+                <div class="acc-title-group">
+                    <h3 class="acc-title">Professional</h3>
+                    <span class="popular-badge">Most Popular</span>
+                </div>
+                <div class="acc-price-group">
+                    <div class="acc-price">₹<span class="price-val" data-annual="39" data-monthly="49">39</span><span class="period">/mo</span></div>
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+            </div>
+            <div class="acc-body">
+                <div class="acc-content-grid">
+                    <div class="feature-list">
+                        <h4>Everything in Starter, plus:</h4>
+                        <ul>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Access to core HR features</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Employee record management</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Advanced reporting tools</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Manage up to 50 team members</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Track employee attendance</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Assign and monitor tasks</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Email support</li>
+                            
+                            <li class="disabled"><svg class="cross-icon"><use href="#icon-cross"></use></svg>Simple onboarding process</li>
+                            <li class="disabled"><svg class="cross-icon"><use href="#icon-cross"></use></svg>Designed user-focused interfaces, optimized user</li>
+                        </ul>
+                    </div>
+                    <div class="form-wrapper">
+                        <h4>Get Started with Pro</h4>
+                        <form class="checkout-form" onsubmit="event.preventDefault(); alert('Pro Selected!');">
+                            <input type="text" placeholder="Company Name" required>
+                            <input type="email" placeholder="Work Email" required>
+                            <button type="submit">Continue to Checkout</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="acc-item">
+            <div class="acc-header" onclick="togglePricing(this)">
+                <div class="acc-title-group">
+                    <h3 class="acc-title">Enterprise</h3>
+                </div>
+                <div class="acc-price-group">
+                    <div class="acc-price">$<span class="price-val" data-annual="119" data-monthly="149">119</span><span class="period">/mo</span></div>
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+            </div>
+            <div class="acc-body">
+                <div class="acc-content-grid">
+                    <div class="feature-list">
+                        <h4>All features included:</h4>
+                        <ul>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Access to core HR features</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Employee record management</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Custom reporting tools</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Manage unlimited team members</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Track employee attendance</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Assign and monitor tasks</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>24/7 Priority support</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Simple onboarding process</li>
+                            <li><svg class="check-icon"><use href="#icon-check"></use></svg>Designed user-focused interfaces, optimized user</li>
+                        </ul>
+                    </div>
+                    <div class="form-wrapper">
+                        <h4>Contact Sales</h4>
+                        <form class="checkout-form" onsubmit="event.preventDefault(); alert('Enterprise Selected!');">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="tel" placeholder="Phone Number" required>
+                            <button type="submit">Request a Call</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="pricing.js"></script>
+</body>
+</html>
