@@ -781,23 +781,25 @@
             </div>
 
             <div class="toggle-wrapper reveal delay-100">
-                <div class="billing-toggle" id="billingToggle">
+                <div class="billing-toggle active-1m" id="billingToggle">
                     <div class="toggle-slider"></div>
-                    <button class="toggle-btn active" id="btnAnnual" onclick="setBilling('annual')">Annual</button>
-                    <button class="toggle-btn" id="btnMonthly" onclick="setBilling('monthly')">Monthly</button>
+                    <button class="toggle-btn active" id="btn1M" onclick="setBilling('1m')">Monthly</button>
+                    <button class="toggle-btn" id="btn3M" onclick="setBilling('3m')">Quarterly</button>
+                    <button class="toggle-btn" id="btn6M" onclick="setBilling('6m')">Half-Yearly</button>
+                    <button class="toggle-btn" id="btn12M" onclick="setBilling('12m')">Annually</button>
                 </div>
             </div>
 
             <div class="pricing-accordion reveal delay-200">
 
+                <!-- Stocks Item -->
                 <div class="acc-item">
                     <div class="acc-header" onclick="togglePricing(this)">
                         <div class="acc-title-group">
-                            <h3 class="acc-title">Starter</h3>
+                            <h3 class="acc-title">Stocks</h3>
                         </div>
                         <div class="acc-price-group">
-                            <div class="acc-price">$<span class="price-val" data-annual="12"
-                                    data-monthly="15">12</span><span class="period">/mo</span></div>
+                            <div class="acc-price">₹<span class="price-val" data-1m="199" data-3m="549" data-6m="899" data-12m="1499">199</span><span class="period">/mo</span></div>
                             <svg class="chevron" viewBox="0 0 24 24" fill="none">
                                 <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
@@ -810,38 +812,35 @@
                                 <ul>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Access to core HR features</li>
+                                        </svg>High-conviction equity calls</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Employee record management</li>
+                                        </svg>Short-term swing strategies</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Basic reporting tools</li>
+                                        </svg>Long-term investment picks</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Manage up to 10 team members</li>
+                                        </svg>Live entry/exit alerts</li>
 
                                     <li class="disabled"><svg class="cross-icon">
                                             <use href="#icon-cross"></use>
-                                        </svg>Track employee attendance</li>
+                                        </svg>F&O Intraday calls</li>
                                     <li class="disabled"><svg class="cross-icon">
                                             <use href="#icon-cross"></use>
-                                        </svg>Assign and monitor tasks</li>
+                                        </svg>F&O Positional strategies</li>
                                     <li class="disabled"><svg class="cross-icon">
                                             <use href="#icon-cross"></use>
-                                        </svg>Email support</li>
+                                        </svg>Commodities & Mutual Funds</li>
                                     <li class="disabled"><svg class="cross-icon">
                                             <use href="#icon-cross"></use>
-                                        </svg>Simple onboarding process</li>
-                                    <li class="disabled"><svg class="cross-icon">
-                                            <use href="#icon-cross"></use>
-                                        </svg>Designed user-focused interfaces, optimized user</li>
+                                        </svg>Priority Support</li>
                                 </ul>
                             </div>
                             <div class="form-wrapper">
-                                <h4>Get Started with Starter</h4>
+                                <h4>Get Started with Stocks</h4>
                                 <form class="checkout-form"
-                                    onsubmit="event.preventDefault(); alert('Starter Selected!');">
+                                    onsubmit="event.preventDefault(); alert('Stocks Plan Selected!');">
                                     <input type="text" placeholder="Full Name" required>
                                     <input type="email" placeholder="Email Address" required>
                                     <button type="submit">Continue to Checkout</button>
@@ -851,15 +850,14 @@
                     </div>
                 </div>
 
+                <!-- FnO Item -->
                 <div class="acc-item">
                     <div class="acc-header" onclick="togglePricing(this)">
                         <div class="acc-title-group">
-                            <h3 class="acc-title">Professional</h3>
-                            <span class="popular-badge">Most Popular</span>
+                            <h3 class="acc-title">FnO</h3>
                         </div>
                         <div class="acc-price-group">
-                            <div class="acc-price">₹<span class="price-val" data-annual="39"
-                                    data-monthly="49">39</span><span class="period">/mo</span></div>
+                            <div class="acc-price">₹<span class="price-val" data-1m="249" data-3m="659" data-6m="1199" data-12m="1899">249</span><span class="period">/mo</span></div>
                             <svg class="chevron" viewBox="0 0 24 24" fill="none">
                                 <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
@@ -868,43 +866,42 @@
                     <div class="acc-body">
                         <div class="acc-content-grid">
                             <div class="feature-list">
-                                <h4>Everything in Starter, plus:</h4>
+                                <h4>Plan Features</h4>
                                 <ul>
+                                    <li class="disabled"><svg class="cross-icon">
+                                            <use href="#icon-cross"></use>
+                                        </svg>High-conviction equity calls</li>
+                                    <li class="disabled"><svg class="cross-icon">
+                                            <use href="#icon-cross"></use>
+                                        </svg>Short-term swing strategies</li>
+                                    <li class="disabled"><svg class="cross-icon">
+                                            <use href="#icon-cross"></use>
+                                        </svg>Long-term investment picks</li>
+
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Access to core HR features</li>
+                                        </svg>F&O Intraday calls</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Employee record management</li>
+                                        </svg>F&O Positional strategies</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Advanced reporting tools</li>
+                                        </svg>Option chain insights</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Manage up to 50 team members</li>
-                                    <li><svg class="check-icon">
-                                            <use href="#icon-check"></use>
-                                        </svg>Track employee attendance</li>
-                                    <li><svg class="check-icon">
-                                            <use href="#icon-check"></use>
-                                        </svg>Assign and monitor tasks</li>
-                                    <li><svg class="check-icon">
-                                            <use href="#icon-check"></use>
-                                        </svg>Email support</li>
+                                        </svg>Live entry/exit alerts</li>
 
                                     <li class="disabled"><svg class="cross-icon">
                                             <use href="#icon-cross"></use>
-                                        </svg>Simple onboarding process</li>
-                                    <li class="disabled"><svg class="cross-icon">
-                                            <use href="#icon-cross"></use>
-                                        </svg>Designed user-focused interfaces, optimized user</li>
+                                        </svg>Commodities & Mutual Funds</li>
                                 </ul>
                             </div>
                             <div class="form-wrapper">
-                                <h4>Get Started with Pro</h4>
-                                <form class="checkout-form" onsubmit="event.preventDefault(); alert('Pro Selected!');">
-                                    <input type="text" placeholder="Company Name" required>
-                                    <input type="email" placeholder="Work Email" required>
+                                <h4>Get Started with FnO</h4>
+                                <form class="checkout-form"
+                                    onsubmit="event.preventDefault(); alert('FnO Plan Selected!');">
+                                    <input type="text" placeholder="Full Name" required>
+                                    <input type="email" placeholder="Email Address" required>
                                     <button type="submit">Continue to Checkout</button>
                                 </form>
                             </div>
@@ -912,14 +909,73 @@
                     </div>
                 </div>
 
+                <!-- Stocks + FnO Item -->
                 <div class="acc-item">
                     <div class="acc-header" onclick="togglePricing(this)">
                         <div class="acc-title-group">
-                            <h3 class="acc-title">Enterprise</h3>
+                            <h3 class="acc-title">Stocks + FnO</h3>
+                            <span class="popular-badge">Most Popular</span>
                         </div>
                         <div class="acc-price-group">
-                            <div class="acc-price">$<span class="price-val" data-annual="119"
-                                    data-monthly="149">119</span><span class="period">/mo</span></div>
+                            <div class="acc-price">₹<span class="price-val" data-1m="499" data-3m="1199" data-6m="1799" data-12m="2399">499</span><span class="period">/mo</span></div>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="acc-body">
+                        <div class="acc-content-grid">
+                            <div class="feature-list">
+                                <h4>Everything in Stocks & FnO, plus:</h4>
+                                <ul>
+                                    <li><svg class="check-icon">
+                                            <use href="#icon-check"></use>
+                                        </svg>High-conviction equity calls</li>
+                                    <li><svg class="check-icon">
+                                            <use href="#icon-check"></use>
+                                        </svg>Short-term swing strategies</li>
+                                    <li><svg class="check-icon">
+                                            <use href="#icon-check"></use>
+                                        </svg>Long-term investment picks</li>
+                                    <li><svg class="check-icon">
+                                            <use href="#icon-check"></use>
+                                        </svg>F&O Intraday calls</li>
+                                    <li><svg class="check-icon">
+                                            <use href="#icon-check"></use>
+                                        </svg>F&O Positional strategies</li>
+                                    <li><svg class="check-icon">
+                                            <use href="#icon-check"></use>
+                                        </svg>Option chain insights</li>
+                                    <li><svg class="check-icon">
+                                            <use href="#icon-check"></use>
+                                        </svg>Live entry/exit alerts</li>
+
+                                    <li class="disabled"><svg class="cross-icon">
+                                            <use href="#icon-cross"></use>
+                                        </svg>Commodities & Mutual Funds</li>
+                                </ul>
+                            </div>
+                            <div class="form-wrapper">
+                                <h4>Get Started with Stocks + FnO</h4>
+                                <form class="checkout-form"
+                                    onsubmit="event.preventDefault(); alert('Stocks + FnO Selected!');">
+                                    <input type="text" placeholder="Full Name" required>
+                                    <input type="email" placeholder="Email Address" required>
+                                    <button type="submit">Continue to Checkout</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All in One Item -->
+                <div class="acc-item">
+                    <div class="acc-header" onclick="togglePricing(this)">
+                        <div class="acc-title-group">
+                            <h3 class="acc-title">All in One</h3>
+                        </div>
+                        <div class="acc-price-group">
+                            <div class="acc-price">₹<span class="price-val" data-1m="599" data-3m="1499" data-6m="2399" data-12m="3599">599</span><span class="period">/mo</span></div>
                             <svg class="chevron" viewBox="0 0 24 24" fill="none">
                                 <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
@@ -932,37 +988,34 @@
                                 <ul>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Access to core HR features</li>
+                                        </svg>High-conviction equity calls</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Employee record management</li>
+                                        </svg>Short-term swing strategies</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Custom reporting tools</li>
+                                        </svg>Long-term investment picks</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Manage unlimited team members</li>
+                                        </svg>F&O Intraday calls</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Track employee attendance</li>
+                                        </svg>F&O Positional strategies</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Assign and monitor tasks</li>
+                                        </svg>Commodities & Mutual Funds</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>24/7 Priority support</li>
+                                        </svg>Live entry/exit alerts</li>
                                     <li><svg class="check-icon">
                                             <use href="#icon-check"></use>
-                                        </svg>Simple onboarding process</li>
-                                    <li><svg class="check-icon">
-                                            <use href="#icon-check"></use>
-                                        </svg>Designed user-focused interfaces, optimized user</li>
+                                        </svg>24/7 Priority Support</li>
                                 </ul>
                             </div>
                             <div class="form-wrapper">
                                 <h4>Contact Sales</h4>
                                 <form class="checkout-form"
-                                    onsubmit="event.preventDefault(); alert('Enterprise Selected!');">
+                                    onsubmit="event.preventDefault(); alert('All in One Selected!');">
                                     <input type="text" placeholder="Your Name" required>
                                     <input type="tel" placeholder="Phone Number" required>
                                     <button type="submit">Request a Call</button>
