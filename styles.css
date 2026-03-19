@@ -135,7 +135,7 @@ img {
 }
 
 .btn-primary {
-  background-color: var(--text-main);
+  background-color: var(--brand-color);
   color: var(--text-light);
 }
 
@@ -145,12 +145,12 @@ img {
 }
 
 .btn-accent {
-  background-color: var(--accent-primary);
+  background-color: var(--brand-color);
   color: var(--text-light);
 }
 
 .btn-accent:hover {
-  background-color: var(--accent-secondary);
+  background-color: var(--accent-primary);
   box-shadow: var(--shadow-glow);
 }
 
@@ -1969,7 +1969,7 @@ img {
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-dark);
   border: 1px solid var(--glass-border);
   display: flex;
   align-items: center;
@@ -3387,7 +3387,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2A3143;
+  color: #FC4C02;
   cursor: pointer;
   transition: background 0.3s ease;
 }
