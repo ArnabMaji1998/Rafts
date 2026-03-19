@@ -1412,7 +1412,7 @@ img {
 
 .team-card:hover {
   transform: translateY(-12px);
-  background-color: var(--accent-positive);
+  background-color: var(--brand-color2);
 }
 
 .team-img-wrapper {
