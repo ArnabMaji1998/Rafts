@@ -164,6 +164,18 @@ img {
   background-color: var(--bg-secondary);
 }
 
+.btn-outline-accent {
+  background-color: transparent;
+  border: 1px solid var(--brand-color);
+  color: var(--brand-color);
+}
+
+.btn-outline-accent:hover {
+  background-color: var(--brand-color);
+  color: var(--text-light);
+  box-shadow: var(--shadow-glow);
+}
+
 /* Animation Classes */
 .reveal {
   opacity: 0;
