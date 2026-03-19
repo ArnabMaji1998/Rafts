@@ -1326,7 +1326,7 @@ img {
 .feature-card {
   padding: 40px 32px;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
-  background: var(--brand-color);
+  background: linear-gradient(135deg, var(--brand-color), var(--brand-color2));
   border: 1px solid var(--glass-border);
 }
 
@@ -1553,7 +1553,7 @@ img {
 /* --- Integrations & Metrics --- */
 .metrics-section {
   padding: 80px 0;
-  background: var(--brand-color);
+  background: linear-gradient(135deg, var(--brand-color), var(--brand-color2));
   color: var(--text-light);
 }
 
