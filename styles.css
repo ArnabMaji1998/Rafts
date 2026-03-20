@@ -302,7 +302,7 @@ img {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 80px 0;
+  padding: clamp(40px, 5vw, 60px) 0;
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -793,7 +793,7 @@ img {
 
 /* --- About Section --- */
 .about-section {
-  padding: 80px 0;
+  padding: clamp(40px, 5vw, 60px) 0;
   background: var(--bg-primary);
 }
 
@@ -1288,7 +1288,7 @@ img {
 
 /* --- Features Section --- */
 .features-section {
-  padding: 80px 0;
+  padding: clamp(40px, 5vw, 60px) 0;
   background: var(--bg-secondary);
 }
 
@@ -1390,7 +1390,7 @@ img {
 
 /* --- Team Section --- */
 .team-section {
-  padding: 80px 0;
+  padding: clamp(40px, 5vw, 60px) 0;
   background: var(--bg-primary);
 }
 
@@ -1552,7 +1552,7 @@ img {
 
 /* --- Integrations & Metrics --- */
 .metrics-section {
-  padding: 80px 0;
+  padding: clamp(40px, 5vw, 60px) 0;
   background: linear-gradient(135deg, var(--brand-color), var(--brand-color2));
   color: var(--text-light);
 }
@@ -1647,7 +1647,7 @@ img {
 
 /* --- Bento Box --- */
 .bento-section {
-  padding: 120px 0;
+  padding: clamp(60px, 7vw, 90px) 0;
   background: var(--bg-primary);
 }
 
@@ -1776,7 +1776,7 @@ img {
 
 /* --- Testimonials --- */
 .testimonials-section {
-  padding: 120px 0;
+  padding: clamp(60px, 7vw, 90px) 0;
   background: var(--bg-secondary);
   position: relative;
   overflow: hidden;
@@ -1911,7 +1911,7 @@ img {
 /* --- Process Section --- */
 
 .process-section {
-  padding: 80px 0;
+  padding: clamp(40px, 5vw, 60px) 0;
   background: var(--bg-primary);
 }
 
@@ -2021,7 +2021,7 @@ img {
 
 /* --- Pricing Section --- */
 .pricing-section {
-  padding: 120px 0;
+  padding: clamp(60px, 7vw, 90px) 0;
   --primary-accent: #10b981;
   --primary-accent-hover: #059669;
   --tick-color: #FB4B1E;
@@ -2700,7 +2700,7 @@ img {
 
 /* --- Live Market Dashboard --- */
 .market-dashboard-section {
-  padding: 100px 0;
+  padding: clamp(50px, 6vw, 80px) 0;
 }
 
 .dashboard-grid {
@@ -2864,7 +2864,7 @@ img {
 
 /* --- Trading Tools --- */
 .trading-tools-section {
-  padding: 100px 0;
+  padding: clamp(50px, 6vw, 80px) 0;
   background: var(--bg-primary);
 }
 
@@ -2965,7 +2965,7 @@ img {
 
 /* --- Trading Blog / Insights --- */
 .insights-section {
-  padding: 100px 0;
+  padding: clamp(50px, 6vw, 80px) 0;
 }
 
 .blog-grid {
@@ -3469,7 +3469,7 @@ img {
 
 /* --- Redesigned Execution Section --- */
 .execution-section {
-  padding: 100px 0;
+  padding: clamp(50px, 6vw, 80px) 0;
   background: linear-gradient(135deg, #06392F, #28623A);
   color: #FFFFFF;
   position: relative;
@@ -3553,6 +3553,11 @@ img {
 @media (max-width: 1024px) {
   .exec-bottom-part {
     flex-direction: column-reverse;
+    text-align: center;
+    gap: 48px;
+  }
+
+  .exec-content-right {
     text-align: center;
   }
 }
@@ -3639,8 +3644,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) perspective(1200px) rotateY(-20deg) rotateX(15deg);
-  width: 250px;
-  height: 510px;
+  width: 200px;
+  height: 410px;
   transform-style: preserve-3d;
 }
 
@@ -3660,8 +3665,8 @@ img {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 25px;
+  width: 85px;
+  height: 15px;
   background: #374151;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
@@ -3790,8 +3795,13 @@ img {
   z-index: 1;
 }
 
-/* Mobile Overrides for Reshaped Layout */
-@media (max-width: 768px) {
+/* Mobile & Tablet Overrides for Reshaped Layout */
+@media (max-width: 1024px) {
+  .exec-main-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .mockup-container {
     height: auto;
     display: flex;
@@ -3814,8 +3824,25 @@ img {
     position: relative !important;
     top: auto !important;
     left: auto !important;
-    transform: perspective(1200px) rotateY(-15deg) rotateX(10deg) !important;
+    transform: perspective(1200px) rotateY(-10deg) rotateX(5deg) !important;
     margin: 40px auto 30px !important;
     order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .exec-stats-row {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .phone-3d-wrapper {
+    transform: perspective(1200px) rotateY(-15deg) rotateX(10deg) !important;
+    width: 220px !important;
+    height: 448px !important;
+  }
+
+  .card-stack {
+    transform: scale(0.9);
   }
 }
