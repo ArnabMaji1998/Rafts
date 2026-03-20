@@ -623,89 +623,114 @@
         </div>
     </section>
 
-    <!-- Bento Box Layout Section -->
-    <section class="bento-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="badge"><span class="badge-dot"></span> Execution</div>
-                <h2>How our advisory process <span style="color: var(--text-orange);">works.</span></h2>
+    <!-- Execution Section (Redesigned) -->
+    <section class="execution-section">
+        <div class="container text-center reveal">
+            <div class="exec-top-part">
+
+                <h2 class="exec-main-title">Real-time AI Market<br>Intelligence.<br>Power Your Wealth.</h2>
+                <p class="exec-main-subtitle">RichAble app delivers thousands of deep-market insights every second,
+                    ensuring you're never behind the curve. Data analyzed, prioritized, and delivered instantly, without
+                    missing a critical market shift or investment opportunity.</p>
+
+                <div class="exec-stats-row">
+                    <div class="exec-stat-box">
+                        <span class="stat-prefix">Up to</span>
+                        <h3 class="stat-number">20,000+</h3>
+                        <span class="stat-suffix">Market Insights<br>per second</span>
+                    </div>
+                    <div class="exec-stat-box">
+                        <span class="stat-prefix">in under</span>
+                        <h3 class="stat-number">1 min</h3>
+                        <span class="stat-suffix">Deep Market Scan<br>Completion</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="bento-grid">
-                <!-- Large Vertical Card -->
-                <div class="bento-item glass-panel b-1 reveal" style="justify-content: space-between;">
-                    <div class="bento-content">
-                        <h3>Live Alerts</h3>
-                        <p style="margin-bottom: 24px;">Receive clear, actionable trades formatted via
-                            WhatsApp/Telegram.</p>
-                    </div>
-                    <div class="bento-visual"
-                        style="background: var(--bg-primary); padding: 24px; border-radius: 16px; border: 1px solid var(--glass-border); position: relative; overflow: hidden;">
-                        <!-- WhatsApp Style Mockup -->
-                        <div
-                            style="background: var(--bg-secondary); padding: 16px; border-radius: 12px 12px 12px 0; border: 1px solid var(--glass-border); box-shadow: var(--shadow-sm); max-width: 90%; position: relative; z-index: 2;">
-                            <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                                <span
-                                    style="background: var(--accent-positive); color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">BUY</span>
-                                <span style="font-weight: 700;">RELIANCE</span>
-                                <span style="color: var(--text-muted);">@ 2500</span>
-                            </div>
-                            <div style="font-family: monospace; font-size: 0.9rem; line-height: 1.6;">
-                                <div style="color: var(--accent-positive);">TGT: 2580</div>
-                                <div style="color: var(--accent-negative);">SL: 2460</div>
-                            </div>
-                            <div
-                                style="margin-top: 12px; font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">
-                                #Equities #Swing
-                            </div>
+            <div class="exec-divider"></div>
+
+            <div class="exec-bottom-part">
+                <div class="exec-content-left reveal delay-100">
+                    <div class="mockup-container">
+                        <!-- Connecting labels left -->
+                        <div class="mockup-label label-l1">
+                            <strong>50+ MARKET SECTORS</strong><br>Global Index Tracking
                         </div>
-                        <div
-                            style="position: absolute; bottom: -20px; right: -20px; width: 150px; height: 150px; background: var(--gradient-glow); filter: blur(40px); border-radius: 50%; z-index: 1;">
+                        <div class="mockup-label label-l2">
+                            <strong>5,000+ STOCKS ANALYZED</strong><br>Deep Fundamental & Tech Data
+                        </div>
+                        <div class="mockup-label label-l3">
+                            <strong>MULTI-ASSET CLASS</strong><br>Equities, F&O, Commodities
+                        </div>
+
+                        <!-- Connecting labels right -->
+                        <div class="mockup-label label-r1">
+                            <strong>AI ADVISORY PANEL</strong><br>Personalized Portfolio Recoms.
+                        </div>
+                        <div class="mockup-label label-r2">
+                            <strong>REAL-TIME TRACKING</strong><br>Performance and Allocations
+                        </div>
+
+                        <!-- 3D Phone & Stack -->
+                        <div class="phone-3d-wrapper">
+                            <div class="phone-frame">
+                                <div class="phone-notch"></div>
+                                <div class="card-stack" id="execCardStack">
+                                    <div class="stacked-ui-card stack-pos-1">
+                                        <div class="card-header">
+                                            <i data-lucide="activity"></i> Reliance Ind
+                                        </div>
+                                        <div class="card-chart">
+                                            <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+                                                <path d="M0,35 L10,30 L20,32 L40,15 L60,25 L80,5 L100,10" fill="none"
+                                                    stroke="#22D3EE" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <div class="card-buttons">
+                                            <div class="btn-sm-buy">Buy</div>
+                                            <div class="btn-sm-sell">Sell</div>
+                                        </div>
+                                    </div>
+                                    <div class="stacked-ui-card stack-pos-2">
+                                        <div class="card-header">
+                                            <i data-lucide="layers"></i> Live Portfolio
+                                        </div>
+                                        <div class="card-list">
+                                            <div class="c-item"><span>NIFTY</span><span
+                                                    class="text-positive">+1.2%</span></div>
+                                            <div class="c-item"><span>BANKNIFTY</span><span
+                                                    class="text-negative">-0.4%</span></div>
+                                        </div>
+                                        <div class="card-buttons">
+                                            <div class="btn-sm-buy">Buy</div>
+                                            <div class="btn-sm-sell">Sell</div>
+                                        </div>
+                                    </div>
+                                    <div class="stacked-ui-card stack-pos-3">
+                                        <div class="card-header">
+                                            <i data-lucide="pie-chart"></i> Asset Allocation
+                                        </div>
+                                        <div class="card-bars">
+                                            <div class="c-bar" style="width: 70%; background: #34D399;"></div>
+                                            <div class="c-bar" style="width: 40%; background: #60A5FA;"></div>
+                                            <div class="c-bar" style="width: 85%; background: #FBBF24;"></div>
+                                        </div>
+                                        <div class="card-buttons">
+                                            <div class="btn-sm-buy">Buy</div>
+                                            <div class="btn-sm-sell">Sell</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Square Card 1 -->
-                <div class="bento-item b-2 reveal delay-100"
-                    style="background: var(--bg-dark); color: var(--text-light); border-color: rgba(255,255,255,0.1);">
-                    <div class="bento-content text-center"
-                        style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-                        <h2 class="giant-number"
-                            style="font-size: 4.5rem; line-height: 1; margin-bottom: 8px; background: var(--gradient-numbers); -webkit-background-clip: text; background-clip: text; color: transparent;">
-                            100%</h2>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 8px; color: var(--text-light);">SEBI Compliant</h3>
-                        <p style="color: rgba(255,255,255,0.7);">Fully regulated research and advice you can
-                            consistently trust.</p>
-                    </div>
-                </div>
-
-                <!-- Small Card -->
-                <div class="bento-item glass-panel b-4 reveal delay-200">
-                    <div class="bento-content"
-                        style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                        <div>
-                            <h4 style="font-size: 1.25rem; margin-bottom: 8px;">Dedicated Support</h4>
-                            <p>Connect with your analyst directly for portfolio queries.</p>
-                        </div>
-                        <div
-                            style="width: 48px; height: 48px; border-radius: 50%; background: var(--bg-primary); display: flex; align-items: center; justify-content: center; border: 1px solid var(--glass-border); color: var(--accent-secondary); margin-top: 16px;">
-                            <i data-lucide="phone-call"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Wide Card -->
-                <div class="bento-item glass-panel b-3 reveal delay-300"
-                    style="flex-direction: row; align-items: center; gap: 24px;">
-                    <div
-                        style="width: 64px; height: 64px; border-radius: 16px; background: var(--bg-dark); color: var(--accent-secondary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                        <i data-lucide="zap" style="width: 32px; height: 32px;"></i>
-                    </div>
-                    <div class="bento-content">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Instant Trade Updates</h3>
-                        <p>Never miss a breakout or breakdown. Get rapid, actionable alerts pushed directly to your
-                            phone the second market structure shifts.</p>
-                    </div>
+                <div class="exec-content-right reveal delay-200 text-left">
+                    <h2>Explore the tools on our comprehensive platform.</h2>
+                    <p>RichAble offers a full suite of professional tools, from AI-driven investment advice and deep
+                        analyst-grade research to multi-asset trading, all in one intuitive interface. Integrated tools
+                        that work together for smarter, faster investing.</p>
                 </div>
             </div>
         </div>
